@@ -1,0 +1,81 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  DisplayCopNames: true
+  TargetRubyVersion: 2.3
+
+  Exclude:
+    - "example_*"
+
+Layout/CaseIndentation:
+  EnforcedStyle: end
+
+Layout/IndentFirstArrayElement:
+  EnforcedStyle: consistent
+
+Layout/IndentFirstHashElement:
+  EnforcedStyle: consistent
+
+Layout/IndentHeredoc:
+  Enabled: false
+
+Metrics/BlockLength:
+  Max: 40
+  Exclude:
+    - "spec/**/*.rb"
+
+Metrics/ClassLength:
+  Exclude:
+    - "spec/**/*.rb"
+
+Metrics/LineLength:
+  Exclude:
+    - "spec/**/*.rb"
+
+Metrics/MethodLength:
+  Max: 30
+
+Metrics/ModuleLength:
+  Enabled: false
+
+# Offense count: 23
+Metrics/AbcSize:
+  Max: 51
+
+# Offense count: 12
+Metrics/ClassLength:
+  Max: 200
+
+# Offense count: 12
+Metrics/CyclomaticComplexity:
+  Max: 15
+
+# Offense count: 6
+Metrics/ParameterLists:
+  Max: 7
+
+# Offense count: 8
+Metrics/PerceivedComplexity:
+  Max: 17
+
+# Offense count: 86
+Style/Documentation:
+  Enabled: false
+
+Style/AccessModifierDeclarations:
+  EnforcedStyle: inline
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: always
+
+Style/NumericPredicate:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: consistent_comma
